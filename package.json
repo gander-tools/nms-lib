@@ -1,0 +1,60 @@
+{
+    "name": "@gander/nms-lib",
+    "description": "NMS Calc Library",
+    "type": "commonjs",
+    "version": "1.1.0",
+    "keywords": [
+        "nomanssky",
+        "No Man's Sky",
+        "calculator"
+    ],
+    "author": "Adam Gąsowski",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/gander/nms-lib/issues"
+    },
+    "homepage": "https://github.com/gander/nms-lib",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.cts",
+    "exports": {
+        "require": {
+            "types": "./dist/index.d.cts",
+            "default": "./dist/index.cjs"
+        },
+        "import": {
+            "types": "./dist/index.d.mts",
+            "default": "./dist/index.mjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "prepack": "eslint && vitest --run && tsc && pkgroll --clean-dist --sourcemap --minify && publint",
+        "release": "release-it --only-version",
+        "coverage": "vitest --coverage",
+        "lint": "eslint",
+        "test": "vitest"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.17.0",
+        "@types/bun": "^1.1.14",
+        "@types/node": "^22.10.3",
+        "@vitest/coverage-v8": "2.1.8",
+        "@vitest/ui": "^2.1.8",
+        "eslint": "^9.17.0",
+        "pkgroll": "^2.6.0",
+        "publint": "^0.2.12",
+        "release-it": "^17.11.0",
+        "typescript-eslint": "^8.19.0",
+        "vitest": "^2.1.8"
+    },
+    "peerDependencies": {
+        "typescript": "^5.7.2",
+        "@vue/reactivity": "^3.5.13"
+    }
+}
