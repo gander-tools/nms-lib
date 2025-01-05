@@ -1,0 +1,9 @@
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+#
+
+rc: ~/.lefthookrc
+
+pre-commit:
+    jobs:
+        -   run: bun run check
