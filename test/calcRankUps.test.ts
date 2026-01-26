@@ -68,7 +68,10 @@ describe("calcRankUps", () => {
         { expeditions: 58, total: 10 },
         { expeditions: 59, total: 10 },
         { expeditions: 60, total: 10 },
-    ])("calc rankUps for $expeditions expeditions", ({ expeditions, total }) => {
+    ])("calc rankUps for $expeditions expeditions", ({
+        expeditions,
+        total,
+    }) => {
         expect(calcRankUps(expeditions)).toBe(total);
     });
 });

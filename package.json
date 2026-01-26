@@ -3,7 +3,11 @@
     "description": "NMS Calc Library",
     "type": "commonjs",
     "version": "0.0.0",
-    "keywords": ["nomanssky", "No Man's Sky", "calculator"],
+    "keywords": [
+        "nomanssky",
+        "No Man's Sky",
+        "calculator"
+    ],
     "engines": {
         "node": "^24.0.0"
     },
@@ -26,7 +30,9 @@
             "default": "./dist/index.mjs"
         }
     },
-    "files": ["dist"],
+    "files": [
+        "dist"
+    ],
     "publishConfig": {
         "access": "public"
     },
