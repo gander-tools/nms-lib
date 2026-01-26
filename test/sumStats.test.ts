@@ -19,13 +19,33 @@ describe("sumStats", () => {
     });
 
     it("should sum integer values", () => {
-        const result = sumStats([1, 3.9, "4.9", undefined, null, "nope", "0", "0.9", "2"]);
+        const result = sumStats([
+            1,
+            3.9,
+            "4.9",
+            undefined,
+            null,
+            "nope",
+            "0",
+            "0.9",
+            "2",
+        ]);
 
         expect(result).toBe(10);
     });
 
     it("should sum positive and negative values", () => {
-        const result = sumStats([1, 3.9, "-4.9", undefined, null, "nope", "0", "0.9", "-2"]);
+        const result = sumStats([
+            1,
+            3.9,
+            "-4.9",
+            undefined,
+            null,
+            "nope",
+            "0",
+            "0.9",
+            "-2",
+        ]);
 
         expect(result).toBe(-2);
     });
