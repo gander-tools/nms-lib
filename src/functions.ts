@@ -19,17 +19,24 @@ export type SumStatsArgument = number | string | undefined | null;
 
 export function sumStats(stats: SumStatsArgument[] = []): number {
     return stats
-        .map((v: SumStatsArgument) => Number.parseInt(String(v)))
+        .map((v: SumStatsArgument) => Number.parseInt(String(v), 10))
         .filter((v) => Number.isInteger(v))
         .reduce((s, v) => s + v, 0);
 }
 
-export function calcBaseStats(mainStats: number, bonusStats: number, rank_ups: number): number {
+export function calcBaseStats(
+    mainStats: number,
+    bonusStats: number,
+    rank_ups: number,
+): number {
     return mainStats - (Math.min(bonusStats, MAX_BONUS) + 6 * rank_ups);
 }
 
 export function calcRankUps(expeditions: number): number {
-    const correctExpeditions = Math.min(Math.max(0, expeditions), MAX_EXPEDITIONS);
+    const correctExpeditions = Math.min(
+        Math.max(0, expeditions),
+        MAX_EXPEDITIONS,
+    );
     let closestRank = 0;
     for (const [expCount, rankCount] of expeditionsRankUps) {
         if (expCount <= correctExpeditions) {
