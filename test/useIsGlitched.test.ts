@@ -89,10 +89,7 @@ describe("useIsGlitched", () => {
         { expeditions: 58, rankUp: false },
         { expeditions: 59, rankUp: false },
         { expeditions: 60, rankUp: false },
-    ])("is glitched when $expeditions match rankUp", ({
-        expeditions,
-        rankUp,
-    }) => {
+    ])("is glitched when $expeditions match rankUp", ({ expeditions, rankUp }) => {
         const exp = ref(expeditions);
         const stats = ref(0);
 

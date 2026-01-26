@@ -76,10 +76,7 @@ describe("isGlitched", () => {
         { expeditions: 58, rankUp: false },
         { expeditions: 59, rankUp: false },
         { expeditions: 60, rankUp: false },
-    ])("is glitched when $expeditions match rankUp", ({
-        expeditions,
-        rankUp,
-    }) => {
+    ])("is glitched when $expeditions match rankUp", ({ expeditions, rankUp }) => {
         expect(isGlitched(0, expeditions)).toBe(rankUp);
     });
 });

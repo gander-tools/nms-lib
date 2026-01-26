@@ -15,18 +15,14 @@ describe("useSumStats", () => {
     });
 
     it("should sum integer values", () => {
-        const result = useSumStats(
-            ref([1, 3.9, "4.9", undefined, null, "nope", "0", "0.9", "2"]),
-        );
+        const result = useSumStats(ref([1, 3.9, "4.9", undefined, null, "nope", "0", "0.9", "2"]));
 
         expect(isRef(result)).toBe(true);
         expect(result.value).toBe(10);
     });
 
     it("should sum positive and negative values", () => {
-        const result = useSumStats(
-            ref([1, 3.9, "-4.9", undefined, null, "nope", "0", "0.9", "-2"]),
-        );
+        const result = useSumStats(ref([1, 3.9, "-4.9", undefined, null, "nope", "0", "0.9", "-2"]));
 
         expect(isRef(result)).toBe(true);
         expect(result.value).toBe(-2);
