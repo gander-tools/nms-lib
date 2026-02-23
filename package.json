@@ -52,7 +52,7 @@
         "typecheck": "tsc --noEmit"
     },
     "devDependencies": {
-        "@biomejs/biome": "2.3.15",
+        "@biomejs/biome": "2.4.4",
         "@release-it/bumper": "^7.0.1",
         "@types/bun": "^1.2.3",
         "@types/node": "^24.0.0",
