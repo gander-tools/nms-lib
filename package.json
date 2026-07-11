@@ -64,11 +64,11 @@
         "pkgroll": "^2.11.0",
         "publint": "^0.3.6",
         "release-it": "^19.0.0",
-        "typescript": "^5.7.3",
+        "typescript": "^7.0.0",
         "vitest": "^4.0.0"
     },
     "peerDependencies": {
         "@vue/reactivity": "^3.0.0",
-        "typescript": "^5.0.0"
+        "typescript": "^5.0.0 || ^7.0.0"
     }
 }
