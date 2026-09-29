@@ -89,16 +89,16 @@ describe("useIsGlitched", () => {
         { expeditions: 58, rankUp: false },
         { expeditions: 59, rankUp: false },
         { expeditions: 60, rankUp: false },
-    ])("is glitched when $expeditions match rankUp", ({
-        expeditions,
-        rankUp,
-    }) => {
-        const exp = ref(expeditions);
-        const stats = ref(0);
+    ])(
+        "is glitched when $expeditions match rankUp",
+        ({ expeditions, rankUp }) => {
+            const exp = ref(expeditions);
+            const stats = ref(0);
 
-        const result = useIsGlitched(stats, exp);
+            const result = useIsGlitched(stats, exp);
 
-        expect(isRef(result)).toBe(true);
-        expect(result.value).toBe(rankUp);
-    });
+            expect(isRef(result)).toBe(true);
+            expect(result.value).toBe(rankUp);
+        },
+    );
 });

@@ -11,6 +11,7 @@
     "engines": {
         "node": "^24.0.0"
     },
+    "sideEffects": false,
     "author": "Adam Gąsowski",
     "license": "MIT",
     "bugs": {
@@ -46,16 +47,17 @@
         "prepack": "pkgroll --clean-dist --sourcemap --minify",
         "publint": "publint --pack auto",
         "release": "release-it --only-version",
-        "test": "vitest",
+        "test": "vitest --run",
         "test:coverage": "vitest --coverage",
         "test:run": "vitest run",
         "typecheck": "tsc --noEmit"
     },
     "devDependencies": {
-        "@biomejs/biome": "2.3.15",
+        "@biomejs/biome": "2.5.14",
         "@release-it/bumper": "^8.0.0",
         "@types/bun": "^1.2.3",
         "@types/node": "^24.0.0",
+        "@typescript/typescript6": "^6.0.2",
         "@vitest/coverage-v8": "^5.0.0",
         "@vitest/ui": "^5.0.0",
         "@vue/reactivity": "^3.5.13",
