@@ -69,14 +69,14 @@ describe("useCalcRankUps", () => {
         { expeditions: 58, total: 10 },
         { expeditions: 59, total: 10 },
         { expeditions: 60, total: 10 },
-    ])("calc rankUps for $expeditions expeditions", ({
-        expeditions,
-        total,
-    }) => {
-        const expCount = ref(expeditions);
-        const rankUps = useCalcRankUps(expCount);
+    ])(
+        "calc rankUps for $expeditions expeditions",
+        ({ expeditions, total }) => {
+            const expCount = ref(expeditions);
+            const rankUps = useCalcRankUps(expCount);
 
-        expect(isRef(rankUps)).toBe(true);
-        expect(rankUps.value).toBe(total);
-    });
+            expect(isRef(rankUps)).toBe(true);
+            expect(rankUps.value).toBe(total);
+        },
+    );
 });
