@@ -6,4 +6,4 @@ rc: ~/.lefthookrc
 
 pre-commit:
     jobs:
-        -   run: bun run check
+        - run: bun run check
