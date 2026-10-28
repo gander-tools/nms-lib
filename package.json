@@ -9,7 +9,7 @@
         "calculator"
     ],
     "engines": {
-        "node": "^24.0.0"
+        "node": "^26.0.0"
     },
     "sideEffects": false,
     "author": "Adam Gąsowski",
