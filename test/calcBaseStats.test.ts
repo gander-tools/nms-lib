@@ -36,6 +36,12 @@ describe("calcBaseStats", () => {
         expect(result).toBe(-10);
     });
 
+    it("does not clamp bonuses", () => {
+        const result = calcBaseStats(100, 80, 0);
+
+        expect(result).toBe(20);
+    });
+
     it("only rank up", () => {
         const result = calcBaseStats(0, 0, 5);
 
