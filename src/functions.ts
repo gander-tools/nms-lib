@@ -12,7 +12,6 @@ const expeditionsRankUps: [number, number][] = [
     [55, 10],
 ];
 
-export const MAX_BONUS = 60;
 export const MAX_EXPEDITIONS = 55;
 
 export type SumStatsArgument = number | string | undefined | null;
@@ -29,7 +28,7 @@ export function calcBaseStats(
     bonusStats: number,
     rank_ups: number,
 ): number {
-    return mainStats - (Math.min(bonusStats, MAX_BONUS) + 6 * rank_ups);
+    return mainStats - (bonusStats + 6 * rank_ups);
 }
 
 export function calcRankUps(expeditions: number): number {
